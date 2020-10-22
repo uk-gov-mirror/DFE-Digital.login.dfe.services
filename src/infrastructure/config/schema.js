@@ -42,6 +42,7 @@ const schema = new SimpleSchema({
     type: organisationRequestsSchema,
     optional: true,
   },
+  assets: schemas.assets,
 });
 
 module.exports.validate = () => {
