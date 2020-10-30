@@ -10,6 +10,7 @@ jest.mock('./../../../../src/infrastructure/organisations', () => {
 });
 jest.mock('./../../../../src/infrastructure/account', () => ({
   getById: jest.fn(),
+  getByEmail: jest.fn(),
   getInvitationByEmail: jest.fn(),
 }));
 
