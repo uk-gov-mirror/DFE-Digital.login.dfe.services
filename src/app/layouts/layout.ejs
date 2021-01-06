@@ -162,7 +162,7 @@
 
     ga('create', window.gaTrackingId, {
         'storage': 'none',
-        'clientId' : '<%=(locals.user && locals.user.sub) || 'unauthenticated'%>'
+        'clientId' : '<%=locals.gaClientId || 'unauthenticated'%>'
     });
     ga('send', 'pageview');
 </script>

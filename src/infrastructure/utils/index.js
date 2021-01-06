@@ -41,6 +41,7 @@ const getUserDisplayName = (user) => `${user.given_name || ''} ${user.family_nam
 const setUserContext = async (req, res, next) => {
   if (req.user) {
     res.locals.user = req.user;
+    res.locals.gaClientId = req.user.sub || 'unauthenticated';
     res.locals.displayName = getUserDisplayName(req.user);
     const organisations = await getOrganisationAndServiceForUserV2(req.user.sub, req.id);
     req.userOrganisations = organisations;
